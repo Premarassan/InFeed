@@ -24,7 +24,7 @@ class Home extends Component {
             </View>    
         </View>
     render () {
-        const {results = []} = thi.props.data
+        const {results = []} = this.props.data
          return (
             <View style={styles.container}>
                  {results.map(this.person)}
