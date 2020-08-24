@@ -15,11 +15,19 @@ import { Icon } from 'react-native-elements';
 
 //let id = this.props.id;
 //this.props.navigation.navigate('Explore', {id: id})
+const WebViewGoogle = () => {
+  return (
+     <View style = {{height: 600}}>
+        <WebView source = {{ uri: this.props.link }}/>
+     </View>
+  )
+}
+
 export default class Items extends Component {
     clickClick = () => {
-        Linking.canOpenURL(this.props.link).then(supported => {
+        Linking.canOpenURL(WebViewGoogle).then(supported => {
           if (supported) {
-            Linking.openURL(this.props.link);
+            Linking.openURL(WebViewGoogle);
           } else {
             console.log("Error Error Error to Open:" + this.props.link);
           }
